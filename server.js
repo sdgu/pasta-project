@@ -32,7 +32,15 @@ const path = require("path");
 const jwt = require('express-jwt');
 const cors = require('cors');
 
-require("./env");
+// require("./env");
+try 
+{
+  require.resolve("./env");
+}
+catch (e)
+{
+  console.error(e);
+}
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, "/dist")));
