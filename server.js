@@ -32,14 +32,17 @@ const path = require("path");
 const jwt = require('express-jwt');
 const cors = require('cors');
 
+function moduleAvailable(name) {
+    try {
+        require.resolve(name);
+        return true;
+    } catch(e){}
+    return false;
+}
 // require("./env");
-try 
+if (moduleAvailable("./env"))
 {
   require("./env");
-}
-catch (e)
-{
-  console.error(e);
 }
 
 app.use(cors());
