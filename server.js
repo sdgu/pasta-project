@@ -75,7 +75,7 @@ app.get('/api/deals/private', authCheck, (req,res)=>{
     // Array of private deals
      {
     id: 69,
-    name: 'Name of Paoeuroduct',
+    name: 'Apple Pasta',
     description: 'Descaoeuription of Product',
     originalPrice: 19.90, // Original price of product
     salePrice: 0.99 // Sale price of product

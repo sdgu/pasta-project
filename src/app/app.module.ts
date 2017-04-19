@@ -16,8 +16,8 @@ import { AuthGuard } from "./auth-guard.service";
 
 import { AuthHttp, AuthConfig } from "angular2-jwt";
 
-import { ToolbarComponent } from "./toolbar/toolbar.component";
-import { UserListComponent } from "./user-list/user-list.component";
+// import { ToolbarComponent } from "./toolbar/toolbar.component";
+// import { UserListComponent } from "./user-list/user-list.component";
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({

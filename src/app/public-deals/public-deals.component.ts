@@ -16,7 +16,7 @@ export class PublicDealsComponent implements OnInit {
   // Note: We haven't implemented the Deal or Auth Services yet.
   constructor(
     private dealService: DealService,
-    private authService: AuthService) {
+    public authService: AuthService) {
   }
   // When this component is loaded, we'll call the dealService and get our public deals.
   ngOnInit(): void {
