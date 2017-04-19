@@ -35,7 +35,7 @@ const cors = require('cors');
 // require("./env");
 try 
 {
-  require.resolve("./env");
+  require("./env");
 }
 catch (e)
 {
