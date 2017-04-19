@@ -120,6 +120,6 @@ app.get("*", (req, res) =>
 	}
 });
 
-
-app.listen(6900);
-console.log('Listening on localhost:6900');
+const port = process.env.PORT || 6900;
+app.listen(port);
+console.log(`Listening on port ${port}`);
