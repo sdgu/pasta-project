@@ -32,18 +32,23 @@ const path = require("path");
 const jwt = require('express-jwt');
 const cors = require('cors');
 
-function moduleAvailable(name) {
-    try {
-        require.resolve(name);
-        return true;
-    } catch(e){}
-    return false;
-}
+// function moduleAvailable(name) {
+//     try {
+//         require.resolve(name);
+//         return true;
+//     } catch(e){}
+//     return false;
+// }
 // require("./env");
-if (moduleAvailable("./env"))
-{
-  require("./env");
-}
+// if (moduleAvailable("./env"))
+// {
+//   require("./env");
+//   console.log("got env");
+// }
+// else
+// {
+//   console.log("no env");
+// }
 
 app.use(cors());
 app.use(express.static(path.join(__dirname, "/dist")));
