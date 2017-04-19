@@ -9,8 +9,8 @@ import { Deal } from './deal';
 @Injectable()
 export class DealService {
   // Define the routes we are going to interact with
-  private publicDealsUrl = 'http://localhost:6900/api/deals/public';
-  private privateDealsUrl = 'http://localhost:6900/api/deals/private';
+  private publicDealsUrl = 'api/deals/public';
+  private privateDealsUrl = 'api/deals/private';
 
   constructor(private http: Http, private authHttp: AuthHttp) { }
 
