@@ -39,7 +39,7 @@ const cors = require('cors');
 //     } catch(e){}
 //     return false;
 // }
-require("./env");
+// require("./env");
 // if (moduleAvailable("./env"))
 // {
 //   require("./env");
