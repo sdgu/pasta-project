@@ -22,6 +22,9 @@ const appRoutes: Routes = [
     path: 'special',
     component: PrivateDealsComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: "**", redirectTo: "/deals", pathMatch: "full"
   }
 ];
 // Here we are exporting our routes
