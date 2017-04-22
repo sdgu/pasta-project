@@ -1,1 +1,3 @@
-So I don't have to redo auth0 authentication every time
+#Pasta project
+
+Stay tuned

@@ -7,7 +7,7 @@ declare var Auth0Lock: any;
 @Injectable()
 export class AuthService {
   // We'll use the Auth0 Lock widget for capturing user credentials
-  lock = new Auth0Lock('G13pz7munM40a2dZOoCOhGzd58r0Gbo1', 'sdgu.auth0.com',
+  lock = new Auth0Lock('drekC88wRVL2CGfzx3qBkhofpsbfyEmD', 'sdgu.auth0.com',
   	{
 
   	});
