@@ -1,0 +1,89 @@
+/*element
+{
+	--link-col: #546c78;
+	--link-col: #ffffff;
+}
+*/
+.bottomHRSim
+{
+	border: dotted #3D9999 4px;
+	border-style: none none dotted none;
+
+	padding: 0px 0px 15px 0px;
+}
+
+
+h1
+{
+	color: #ff6666;
+  /*color: #FFD8B7;*/
+	margin: 0px 0px 0px 0px;
+}
+
+#lcolor
+{
+	color: #3D9999;
+  /*color: #808DAB;*/
+}
+
+nav
+{
+	margin: 0px 0px 0px 0px;
+}
+
+/*hr
+{
+	border-top: dotted #3D9999 4px;
+	border-style: dotted none none none;
+}*/
+
+nav a 
+{
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  outline: 0;
+
+}
+nav a:visited, a:link 
+{
+  color: #546c78;
+}
+
+nav a.active 
+{
+  color: #3D9999;
+  /*background-color: #c4cfd4;*/
+
+  /*background-color: #D5E3E3;*/
+
+  /*background-color: #DBDFE8;*/
+  /*background-color: #F7F7F9;*/
+  background-color: #EFFBFE;
+  /*background-color: transparent;*/
+
+  box-shadow: inset 0 0 3px #7a949f;
+
+}
+
+nav a:hover {
+  color: #3D9999;
+  background-color: #f2f2f2;
+
+  box-shadow: inset 0 0 0px #f2f2f2;
+}
+
+/*nav span
+{
+	text-decoration: none;
+	border-bottom: 1px #546c78 dotted;
+}
+*/
+.log
+{
+  float: right;
+ 
+}

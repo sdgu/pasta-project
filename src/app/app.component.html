@@ -1,5 +1,17 @@
 <h1>
-  {{title}}
+	Typing ghost
 </h1>
-<!-- <app-toolbar></app-toolbar> -->
+<div class="bottomHRSim">
+	<nav>
+		<a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><span>home</span></a>
+		<!-- <a routerLink="/about" routerLinkActive="active"><span>about</span></a> -->
+
+		<div class="log">
+			<a (click)=authService.login() *ngIf="!authService.loggedIn()">Log in</a>
+			<a (click)=authService.logout() *ngIf="authService.loggedIn()">Log out</a>
+		</div>
+
+    </nav>
+</div>
+
 <router-outlet></router-outlet>

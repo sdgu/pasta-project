@@ -4,16 +4,25 @@ import { Routes, RouterModule} from '@angular/router';
 import { PublicDealsComponent } from './public-deals/public-deals.component';
 import { PrivateDealsComponent } from './private-deals/private-deals.component';
 
+import { HomeComponent } from "./home/home.component";
+import { NotFoundComponent} from "./not-found/not-found.component";
+
+
 import { AuthGuard } from "./auth-guard.service";
 
+
+
 const appRoutes: Routes = [
-  // Add the redirect
+
   {
     path: '',
-    redirectTo: '/deals',
-    pathMatch: 'full'
+    component: HomeComponent
   },
-  // Add our routes
+
+  {
+    path: "notfound",
+    component: NotFoundComponent
+  },
   {
     path: 'deals',
     component: PublicDealsComponent
@@ -24,7 +33,7 @@ const appRoutes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: "**", redirectTo: "/deals", pathMatch: "full"
+    path: "**", redirectTo: "notfound", pathMatch: "full"
   }
 ];
 // Here we are exporting our routes

@@ -15,6 +15,8 @@ import { PrivateDealsComponent } from './private-deals/private-deals.component';
 import { AuthGuard } from "./auth-guard.service";
 
 import { AuthHttp, AuthConfig } from "angular2-jwt";
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
 
 // import { ToolbarComponent } from "./toolbar/toolbar.component";
 // import { UserListComponent } from "./user-list/user-list.component";
@@ -31,7 +33,9 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
 @NgModule({
   declarations: [
     AppComponent,
-    routedComponents
+    routedComponents,
+    NotFoundComponent,
+    HomeComponent
     // PublicDealsComponent
     // PrivateDealsComponent
 
