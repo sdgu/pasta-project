@@ -5,6 +5,7 @@ import { PublicDealsComponent } from './public-deals/public-deals.component';
 import { PrivateDealsComponent } from './private-deals/private-deals.component';
 
 import { HomeComponent } from "./home/home.component";
+import { InfoComponent } from "./info/info.component";
 import { NotFoundComponent} from "./not-found/not-found.component";
 
 
@@ -18,20 +19,24 @@ const appRoutes: Routes = [
     path: '',
     component: HomeComponent
   },
+  {
+    path: "info",
+    component: InfoComponent
+  },
 
   {
     path: "notfound",
     component: NotFoundComponent
   },
-  {
-    path: 'deals',
-    component: PublicDealsComponent
-  },
-  {
-    path: 'special',
-    component: PrivateDealsComponent,
-    canActivate: [AuthGuard]
-  },
+  // {
+  //   path: 'deals',
+  //   component: PublicDealsComponent
+  // },
+  // {
+  //   path: 'special',
+  //   component: PrivateDealsComponent,
+  //   canActivate: [AuthGuard]
+  // },
   {
     path: "**", redirectTo: "notfound", pathMatch: "full"
   }

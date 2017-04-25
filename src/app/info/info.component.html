@@ -1,0 +1,22 @@
+<div *ngIf="authService.loggedIn()">
+
+<ul>
+
+	<li *ngFor="let char of charsInfo">
+
+		{{char.name}} <br>
+		{{char.info}} <br>
+		{{char.cards}}
+
+
+
+	</li>
+
+</ul>
+</div>
+
+<div *ngIf="!authService.loggedIn()">
+
+	<p>Please log in to view this page.</p>
+
+</div>

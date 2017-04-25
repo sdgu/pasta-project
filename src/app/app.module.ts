@@ -17,9 +17,12 @@ import { AuthGuard } from "./auth-guard.service";
 import { AuthHttp, AuthConfig } from "angular2-jwt";
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
+import { InfoComponent } from './info/info.component';
 
 // import { ToolbarComponent } from "./toolbar/toolbar.component";
 // import { UserListComponent } from "./user-list/user-list.component";
+
+import { InfoService } from "./info.service";
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
@@ -35,7 +38,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     AppComponent,
     routedComponents,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    InfoComponent
     // PublicDealsComponent
     // PrivateDealsComponent
 
@@ -47,7 +51,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     routing
   ],
   providers: [DealService, 
-  
+    InfoService,
     {
       provide: AuthHttp,
       useFactory: authHttpServiceFactory,
