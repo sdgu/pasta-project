@@ -7,7 +7,7 @@ import { Observable } from "rxjs/Observable";
 import "rxjs/add/operator/toPromise";
 import "rxjs/add/operator/map";
 
-import { Info } from "./Info";
+import { Info } from "./info";
 
 @Injectable()
 export class InfoService 

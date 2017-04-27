@@ -1,0 +1,21 @@
+#info
+{
+	/*display: inline-block;*/
+
+	display: table;
+	border-collapse: separate;
+	border-spacing: 0px 4px;
+
+}
+#info div
+{
+	display: table-row;
+}
+#info span
+{
+
+	display: table-cell;
+	padding: 0px 10px 0px 10px;
+	
+
+}

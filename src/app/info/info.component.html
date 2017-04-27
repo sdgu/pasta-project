@@ -1,18 +1,24 @@
 <div *ngIf="authService.loggedIn()">
 
-<ul>
 
+<ul id="info">
 	<li *ngFor="let char of charsInfo">
-
-		{{char.name}} <br>
-		{{char.info}} <br>
-		{{char.cards}}
+		
+		<div>
+			<span>Name:</span> {{char.name}}
+		</div>
+		<div>
+			<span>Info:</span> {{char.info}}
+		</div>
+		<div>
+			<span>Cards:</span> {{char.cards}}
+		</div>
 
 
 
 	</li>
-
 </ul>
+
 </div>
 
 <div *ngIf="!authService.loggedIn()">

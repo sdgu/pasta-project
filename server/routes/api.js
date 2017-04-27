@@ -30,15 +30,27 @@ const CharacterInfo = mongoose.model("CharacterInfo", characterInfoSchema);
 
 router.get("/characterInfo", authCheck, (req, res) =>
 {
-  let test = 
-  [{
-    name: "Chameleon",
-    info: "Is cool.",
-    cards: ["Invis"]
-  }]
-  console.log("getting");
-  console.log(test);
-  res.json(test);
+  // let test = new CharacterInfo(
+  // {
+  //   name: "Chameleon",
+  //   info: "Is cool.",
+  //   cards: ["Invis"]
+  // });
+  // test.save((err) => 
+  // {
+  //   if (err) return handleError(err);
+  // })
+
+  CharacterInfo.find({}, (err, docs) =>
+  {
+    if (err) return handleError(err);
+
+    res.json(docs);
+  })
+
+  // console.log("getting");
+  // console.log(test);
+  // res.json(test);
 
 })
 
