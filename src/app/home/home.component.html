@@ -1,5 +1,7 @@
-<p>
-  home works!
-</p>
+<div class="log">
+	<a (click)=authService.login() *ngIf="!authService.loggedIn()">Log in</a>
+	<a (click)=authService.logout() *ngIf="authService.loggedIn()">Log out</a>
+</div>
+
 
 <p *ngIf="authService.loggedIn()">Secret</p>

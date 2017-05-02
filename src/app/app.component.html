@@ -4,12 +4,13 @@
 <div class="bottomHRSim">
 	<nav>
 		<a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><span>home</span></a>
-		<!-- <a routerLink="/about" routerLinkActive="active"><span>about</span></a> -->
+		<a routerLink="/info" routerLinkActive="active"><span>info</span></a>
+		<a routerLink="/armory" routerLinkActive="active"><span>armory</span></a>
+		<a routerLink="/submission" routerLinkActive="active"><span>submission</span></a>
+<div class="log">
 
-		<div class="log">
-			<a (click)=authService.login() *ngIf="!authService.loggedIn()">Log in</a>
-			<a (click)=authService.logout() *ngIf="authService.loggedIn()">Log out</a>
-		</div>
+	<a href="" (click)=authService.logout() *ngIf="authService.loggedIn()">Log out</a>
+</div>
 
     </nav>
 </div>

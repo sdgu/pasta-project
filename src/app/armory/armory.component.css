@@ -1,0 +1,31 @@
+.container
+{
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.right-half, .left-half
+{
+	display: table-cell;
+	width: 50%;
+}
+
+#itemName
+{
+	border: dotted #3D9999 2px;
+	border-style: none none dotted none;
+	margin: 0px 0px 10px 0px;
+}
+
+#itemDesc
+{
+	font-size: 12pt;
+	margin: 0px 0px 0px 10px;
+}
+
+#itemLore
+{
+	font-size: 12pt;
+	margin: 20px 0px 0px 10px;
+}

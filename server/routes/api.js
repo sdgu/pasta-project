@@ -5,6 +5,11 @@ const jwt = require("express-jwt");
 
 const mongoose = require("mongoose");
 const characterInfoSchema = require("../schema/characterInfoSchema");
+const itemSchema = require("../schema/itemSchema");
+
+const CharacterInfo = mongoose.model("CharacterInfo", characterInfoSchema);
+const Item = mongoose.model("Item", itemSchema);
+
 
 require("../../env");
 
@@ -25,7 +30,6 @@ db.once("open", () =>
   console.log("connected to db");
 })
 
-const CharacterInfo = mongoose.model("CharacterInfo", characterInfoSchema);
 
 
 router.get("/characterInfo", authCheck, (req, res) =>
@@ -54,7 +58,54 @@ router.get("/characterInfo", authCheck, (req, res) =>
 
 })
 
+router.get("/armory", (req, res) => 
+{
+  // let test = 
+  // [{
+  //   name: "Wood sword",
+  //   desc: "Just a wooden sword.",
+  //   lore: "Someone made this out of some wood.",
+  //   img: "none"
+  // }]
+  // res.json(test);
 
+  Item.find((err, docs) =>
+  {
+    if (err) return console.error(err);
+    res.json(docs);
+  });
+
+});
+
+router.post("/armory", (req, res) =>
+{
+  Item.findOne({"name": req.body.name}, (err, docs) =>
+  {
+    if (err) return console.error(err);
+    console.log(docs);
+    if (docs === null)
+    {
+      let submission = new Item(
+      {
+        name: req.body.name,
+        desc: req.body.desc,
+        lore: req.body.lore,
+        img: req.body.img
+      });
+      submission.save((err2, docs2) =>
+      {
+        if (err2) return console.error(err2);
+        console.log("submitted this: " + docs2);
+        res.send(docs2)
+      })
+    }
+    else
+    {
+      console.log("name already exists");
+      res.send({});
+    }
+  })
+})
 
 
 module.exports = router;

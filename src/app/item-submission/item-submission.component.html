@@ -1,0 +1,17 @@
+<h3>Admin item submission</h3>
+
+<div class="submissionTable">
+	<div class="tableRow">
+		<span class="textDescCol">Name: </span><input class="submissionCol" [(ngModel)]="nameToAdd">
+	</div>
+	<div class="tableRow">
+		<span class="textDescCol">Desc: </span><textarea class="submissionCol" [(ngModel)]="descToAdd" cols="45" rows="15"></textarea>
+	</div>
+	<div class="tableRow">
+		<span class="textDescCol">Lore: </span><textarea class="submissionCol" [(ngModel)]="loreToAdd" cols="45" rows="15"></textarea>
+	</div>
+	<div class="tableRow">	
+		<span class="textDescCol">Img: </span><input class="submissionCol" [(ngModel)]="imgToAdd">
+	</div>
+	<button (click)="createItem()">Create item</button>
+</div>

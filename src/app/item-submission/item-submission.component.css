@@ -1,0 +1,18 @@
+.submissionTable
+{
+	display: table;
+}
+.tableRow
+{
+	display: table-row;
+
+}
+.textDescCol
+{
+	display: table-cell;
+	vertical-align: top;
+}
+.submissionCol
+{
+	display: table-cell;
+}

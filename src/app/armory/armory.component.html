@@ -1,0 +1,29 @@
+
+
+
+<section class="container">
+	<div class="left-half">
+		<p *ngFor="let item of items" (click)="view(item)" [class.selected]="item === selectedItem">
+		  {{item.name}}
+
+		</p>
+	</div>
+
+	<div class="right-half">
+		<div *ngIf="selectedItem">
+
+			<p id="itemName">{{selectedItem.name}}</p>
+
+			<p id="itemDesc">{{selectedItem.desc}}</p>
+
+			<p id="itemLore"><em>{{selectedItem.lore}}</em></p>		   
+		 
+		  
+
+
+
+		</div>
+
+	</div>
+
+</section>

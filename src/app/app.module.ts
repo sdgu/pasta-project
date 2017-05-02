@@ -23,6 +23,10 @@ import { InfoComponent } from './info/info.component';
 // import { UserListComponent } from "./user-list/user-list.component";
 
 import { InfoService } from "./info.service";
+import { ItemService } from "./item.service";
+
+import { ArmoryComponent } from './armory/armory.component';
+import { ItemSubmissionComponent } from './item-submission/item-submission.component';
 
 export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   return new AuthHttp(new AuthConfig({
@@ -39,7 +43,9 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     routedComponents,
     NotFoundComponent,
     HomeComponent,
-    InfoComponent
+    InfoComponent,
+    ArmoryComponent,
+    ItemSubmissionComponent
     // PublicDealsComponent
     // PrivateDealsComponent
 
@@ -52,6 +58,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
   ],
   providers: [DealService, 
     InfoService,
+    ItemService,
     {
       provide: AuthHttp,
       useFactory: authHttpServiceFactory,
