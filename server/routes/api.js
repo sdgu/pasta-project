@@ -108,6 +108,27 @@ router.post("/armory", (req, res) =>
 })
 
 
+router.put("/armory/:id", (req, res) =>
+{
+  let _id = req.params.id;
+  Item.update({_id: _id},
+  {
+    $set:
+    {
+      name: req.body.name,
+      desc: req.body.desc,
+      lore: req.body.lore,
+      img: req.body.img
+    }
+  }, (err, docs) =>
+  {
+    if (err) console.error(err);
+    console.log(docs);
+    res.send("updated item");
+  })
+})
+
+
 module.exports = router;
 
 

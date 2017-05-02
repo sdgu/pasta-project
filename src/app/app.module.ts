@@ -45,9 +45,9 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
     HomeComponent,
     InfoComponent,
     ArmoryComponent,
-    ItemSubmissionComponent
-    // PublicDealsComponent
-    // PrivateDealsComponent
+    ItemSubmissionComponent,
+    PublicDealsComponent,
+    PrivateDealsComponent
 
   ],
   imports: [

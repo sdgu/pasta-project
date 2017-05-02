@@ -16,6 +16,8 @@ export class ArmoryComponent implements OnInit {
   items: Item[];
   mode = "Observable";
 
+  isEditing: boolean;
+
   selectedItem: Item;
 
   getArmory(): void
@@ -38,6 +40,17 @@ export class ArmoryComponent implements OnInit {
 
   }
 
+  update(item: Item): void
+  {
+
+  	this.isEditing = !this.isEditing;
+  	this.itemService.updateItem(item)
+  					.then(() => 
+  					{
+
+  					})
+  }
+
   view(item: Item): void
   {
   	this.selectedItem = item;
@@ -46,6 +59,7 @@ export class ArmoryComponent implements OnInit {
   ngOnInit() 
   {
   	this.getArmory();
+  	this.isEditing = false;
 
 
   }

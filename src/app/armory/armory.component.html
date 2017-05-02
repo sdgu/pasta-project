@@ -16,9 +16,21 @@
 
 			<p id="itemDesc">{{selectedItem.desc}}</p>
 
-			<p id="itemLore"><em>{{selectedItem.lore}}</em></p>		   
+			<p id="itemLore"><em>{{selectedItem.lore}}</em></p>	
+
+			<p id="_id">{{selectedItem._id}}</p>	   
 		 
-		  
+			<button *ngIf="!isEditing" (click)="isEditing = ! isEditing">Edit</button>
+			<button *ngIf="isEditing" (click)="isEditing = !isEditing">Close editing</button>
+
+		  	<div *ngIf="isEditing">
+
+		  		<input [(ngModel)]="selectedItem.name"> <br>
+		  		<textarea cols="45" rows="15" [(ngModel)]="selectedItem.desc"></textarea> <br>
+		  		<textarea cols="45" rows="15" [(ngModel)]="selectedItem.lore"></textarea> <br>
+
+		  		<button (click)="update(selectedItem)">Update</button>
+		  	</div>
 
 
 

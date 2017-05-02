@@ -4,5 +4,6 @@ export class Item
 	desc: string;
 	lore: string;
 	img: string;
+	_id: string;
 
 }

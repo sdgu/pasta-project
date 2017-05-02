@@ -40,6 +40,16 @@ export class ItemService
   			   .catch(this.handleError);
   }
 
+  updateItem(item: Item): Promise<Item>
+  {
+  	let url = `${this.itemUrl}/${item._id}`;
+
+  	return this.http.put(url, JSON.stringify(item), {headers: this.headers})
+  					.toPromise()
+  					.then(() => item)
+  					.catch(this.handleError);
+  }
+
 	private handleError(error: any): Promise<any>
 	{
 		console.error("error", error);
