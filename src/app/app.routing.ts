@@ -27,7 +27,8 @@ const appRoutes: Routes = [
   },
   {
     path: "armory",
-    component: ArmoryComponent
+    component: ArmoryComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "submission",
