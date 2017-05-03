@@ -11,7 +11,7 @@ const CharacterInfo = mongoose.model("CharacterInfo", characterInfoSchema);
 const Item = mongoose.model("Item", itemSchema);
 
 
-require("../../env");
+// require("../../env");
 
 const authCheck = jwt(
 {
